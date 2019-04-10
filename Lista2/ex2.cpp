@@ -89,8 +89,11 @@ int Conta::verificaSaldo(double quantia) {
 int main() {
 	Conta Vinicius(1234, 4321, "Vinicius Couto Tasso");
 
+	string nome;
+	int conta, agencia;
+	double deposito_inicial;
 
-	Vinicius.mostraSaldo();
+
 	Vinicius.deposito(50000.50);
 	Vinicius.mostraSaldo();
 
@@ -98,6 +101,30 @@ int main() {
 	Vinicius.mostraSaldo();
 	
 	cout << "Numero da conta: " << Vinicius.getNumero() << endl << "Numero da agencia: " << Vinicius.getAgencia() << endl << endl;
+
+	cout << endl << endl;
+
+	cout << "Ola, preencha os campos abaixo para criar sua conta no banco!" << endl << "Informe seu nome: ";
+	getline(cin, nome);
+
+	cout << "Informe o numero da conta desejado: ";
+	cin >> conta;
+
+	cout << "Informe o numero da agencia desejada: ";
+	cin >> agencia;
+
+	Conta c(conta, agencia, nome);
+
+	cout << "Informe uma quantia para realizar um primeiro deposito em sua conta: ";
+	cin >> deposito_inicial;
+	c.deposito(deposito_inicial);
+
+	cout << endl;
+
+	c.mostraSaldo();
+
+
+
 
 	return 0;
 }
