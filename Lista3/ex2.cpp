@@ -128,6 +128,8 @@ PessoaJuridica::PessoaJuridica(string nome, string endereco, double totalRendime
 {
 }
 
+// Redefinição desses dois métodos para fazer com que use as variaveis PessoaJuridica::imposto e PessoaJuridica::rendimento, ao invés de utilizar os 
+// equivalente da classe PessoaFisica
 double PessoaJuridica::calculaImposto() {
 	return this->getRendimento() * this->imposto;
 }
@@ -152,7 +154,7 @@ int main() {
 	int n;
 
 	PessoaFisica pf("Pessoa Fisica", "Av. Sete de Setembro 3165", 5050.50, 1999);
-	PessoaJuridica pj("Pessoa Juridica", "Av. Sete de Setembro 3165", 5050.50, 2005);
+	PessoaJuridica pj("Pessoa Juridica", "Av. Sete de Setembro 3165", 5050.50, 1999);
 
 
 	cout << "Classe PessoaFisica\n\n" << "Nome: " << pf.getNome() << endl << "Endereço: " << pf.getEndereco() << endl;
