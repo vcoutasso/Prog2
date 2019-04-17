@@ -43,8 +43,6 @@ class Carro {
 		string getMarca();
 		string getModelo();
 
-		
-
 };
 
 Carro::Carro(string mar, string mod, int d, int m, int a, double pot, double pes, string str) {
