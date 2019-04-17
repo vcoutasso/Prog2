@@ -15,9 +15,23 @@
 
 using namespace std;
 
-
-
 int main () {
+	Carro tesla("Tesla", "Model S", 16, 4, 2019, 666, 300, "Elétrico");
+
+	cout << "Marca do carro: " << tesla.getMarca() << endl;
+	cout << "Modelo d ocarro: " << tesla.getModelo() << endl << endl;
+
+	cout << "Dia de fabricação: " << tesla.getDiaFab() << endl;
+	cout << "Mês de fabricação: " << tesla.getMesFab() << endl;
+	cout << "Ano de fabricação: " << tesla.getAnoFab() << endl;
+	cout << "Data de fabricação: " << tesla.getDataFab() << endl << endl;
+
+	cout << "Potência do motor: " << fixed << setprecision(1) << tesla.getPotencia() << endl;
+	cout << "Peso do motor: " << fixed << setprecision(1) << tesla.getPeso() << endl;
+	cout << "Tipo de combustível: " << tesla.getCombustivel() << endl;
+
+	// Desaloca memória alocada para *dataFab e *infoMotor
+	tesla.~Carro();
 
 	return 0;
 } 
